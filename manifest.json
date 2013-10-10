@@ -1,0 +1,28 @@
+{
+  "name": "Set image as Wallpaper in Chrome OS",
+  "version": "1",
+  "icons": {
+    "16": "16.png",
+    "32": "32.png",
+    "128": "128.png"
+  },
+  "file_handlers": {
+    "image": {
+      "types": [
+        "image/png",
+        "image/jpeg"
+      ],
+      "title": "Set As Wallpaper"
+    }
+  },
+  "permissions": [
+    "notifications",
+    "wallpaper"
+  ],
+  "app": {
+    "background": {
+      "scripts": [ "background.js" ]
+    }
+  },
+  "manifest_version": 2
+}
