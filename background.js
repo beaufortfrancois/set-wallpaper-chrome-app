@@ -58,6 +58,18 @@ function onLaunched(data) {
   // Init layout to STRETCH.
   layoutIndex = 0;
 
+  if (!data.items) {
+    chrome.notifications.create('error', {
+      type: 'basic',
+      iconUrl: chrome.runtime.getURL('128.png'),
+      title: 'Hmm...',
+      message: 'Open the Files App and select an image',
+    }, function() {
+      setTimeout(function() {
+        chrome.notifications.clear('error', function() {});
+      }, 5000);
+    });
+  }
   // Retrieve encoded data from chosen image.
   var imageFileEntry = data.items[0].entry;
   imageFileEntry.file(function(imageFile) {
