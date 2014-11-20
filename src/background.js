@@ -48,9 +48,9 @@ function onWallpaperSet() {
 function setWallpaper() {
   // Simply set wallpaper
   chrome.wallpaper.setWallpaper({
-    wallpaperData: wallpaperData,
+    data: wallpaperData,
     layout: LAYOUTS[layoutIndex].layout,
-    name: wallpaperName,
+    filename: wallpaperName,
   }, onWallpaperSet);
 }
 
