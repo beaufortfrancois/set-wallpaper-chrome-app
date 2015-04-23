@@ -1,4 +1,4 @@
-Set image as Wallpaper - Chrome App
+Set image as wallpaper - Chrome App
 ===================================
 
 "Set image as wallpaper" is a Chrome App which does exactly what it says.
